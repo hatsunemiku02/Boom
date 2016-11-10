@@ -16,12 +16,12 @@ public class BoomEntity : BoomObject
     // Only used for boom function
     public void AddData(BoomData data)
     {
-        m_DataList.Add(data.GetType(), data);
+        m_DataList.Add(data.ClassRTTI, data);
     }
     // Only used for boom function
     public void RemoveData(BoomData data)
     {
-        m_DataList.Remove(data.GetType());
+        m_DataList.Remove(data.ClassRTTI);
     }
     
     // Only used for boom function

@@ -5,7 +5,7 @@ public class BoomMove : BoomFunction
 {
     public override void Init()
     {
-        if (Owner.HaveData( BoomTransFormData. ))
+       // if (Owner.HaveData( BoomTransFormData. ))
         {
 
         }
