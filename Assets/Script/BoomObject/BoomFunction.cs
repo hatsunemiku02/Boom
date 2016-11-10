@@ -5,6 +5,13 @@ using System.Collections;
 
 public class BoomFunction : BoomObject {
 
+    public static new BoomClassUID RTTI = new BoomClassUID("BoomFunction");
+
+    public override BoomClassUID GetRTTI()
+    {
+        return BoomFunction.RTTI;
+    }
+
     public BoomFunctionEntity Owner
     {
         get;

@@ -3,10 +3,16 @@ using System.Collections;
 
 public class BoomMove : BoomFunction
 {
+    public static new BoomClassUID RTTI = new BoomClassUID("BoomMove");
+
+    public override BoomClassUID GetRTTI()
+    {
+        return BoomMove.RTTI;
+    }
     public override void Init()
     {
        
-        if (Owner.HaveData(System.Type.GetType(BoomTransFormData)))
+        if (Owner.HaveData(BoomTransFormData.RTTI))
         {
 
         }

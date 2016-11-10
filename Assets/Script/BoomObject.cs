@@ -3,9 +3,10 @@ using System.Collections;
 
 public class BoomObject
 {
-    public BoomClassUID ObjectUID
+    public static BoomClassUID RTTI = new BoomClassUID("BoomObject");
+   
+    public virtual BoomClassUID GetRTTI()
     {
-        get;
-        set;
+        return BoomObject.RTTI;
     }
 }

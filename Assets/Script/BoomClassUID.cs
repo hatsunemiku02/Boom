@@ -4,19 +4,14 @@ using System.Collections;
 public class BoomClassUID
 {
 
-    public string Content
+    private string m_Content;
+
+    public BoomClassUID(string content)
     {
-        set
-        {
-            m_Content = value;
-        }
-        get
-        {
-            return m_Content;
-        }
+        m_Content = content;
     }
 
-    private string m_Content;
+
 
     public static bool operator ==(BoomClassUID rec1, BoomClassUID rec2)
     {

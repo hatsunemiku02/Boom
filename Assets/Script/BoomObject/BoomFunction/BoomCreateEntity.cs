@@ -2,9 +2,14 @@
 using System.Collections;
 
 public class BoomCreateEntity : BoomFunction {
+    public static new BoomClassUID RTTI = new BoomClassUID("BoomCreateEntity");
 
-	// Use this for initialization
-	void Start () {
+    public override BoomClassUID GetRTTI()
+    {
+        return BoomCreateEntity.RTTI;
+    }
+    // Use this for initialization
+    void Start () {
 	
 	}
 	

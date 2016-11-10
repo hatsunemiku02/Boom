@@ -5,6 +5,14 @@ using System.Collections.Generic;
 
 public class BoomFunctionEntity : BoomEntity  
 {
+    public static new BoomClassUID RTTI = new BoomClassUID("BoomFunctionEntity");
+
+    public override BoomClassUID GetRTTI()
+    {
+        return BoomFunctionEntity.RTTI;
+    }
+
+
     protected Dictionary<Type,BoomFunction> m_FunctionList;
 
 

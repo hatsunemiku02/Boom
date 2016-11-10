@@ -3,9 +3,14 @@ using System.Collections;
 
 public class BoomExplode : BoomFunction
 {
+    public static new BoomClassUID RTTI = new BoomClassUID("BoomExplode");
 
-	// Use this for initialization
-	void Start () {
+    public override BoomClassUID GetRTTI()
+    {
+        return BoomExplode.RTTI;
+    }
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
