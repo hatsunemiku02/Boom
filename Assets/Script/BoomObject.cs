@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BoomObject
 {
-    public BoomClassUID ClassRTTI
+    public BoomClassUID ObjectUID
     {
         get;
         set;
