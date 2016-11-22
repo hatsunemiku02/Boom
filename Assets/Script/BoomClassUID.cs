@@ -1,17 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class BoomClassUID
 {
 
+    private BoomObject m_instance;
     private string m_Content;
 
-    public BoomClassUID(string content)
+    public BoomClassUID(string content, BoomObject instance)
     {
         m_Content = content;
+        m_instance = instance;
     }
 
-
+    public BoomObject CreateInstance()
+    {
+        return m_instance.CreateInstance();
+    }
 
     public static bool operator ==(BoomClassUID rec1, BoomClassUID rec2)
     {

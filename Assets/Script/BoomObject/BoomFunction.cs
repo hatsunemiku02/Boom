@@ -3,23 +3,37 @@ using System.Collections;
 
 
 
-public class BoomFunction : BoomObject {
+public class BoomFunction : BoomRefObject {
 
-    public static new BoomClassUID RTTI = new BoomClassUID("BoomFunction");
+    public static new BoomClassUID RTTI = new BoomClassUID("BoomFunction",new BoomFunction());
 
     public override BoomClassUID GetRTTI()
     {
         return BoomFunction.RTTI;
     }
 
+    public BoomFunction()
+    {
+
+    }
+
+    public override BoomObject CreateInstance()
+    {
+        return new BoomFunction();
+    }
+
     public BoomFunctionEntity Owner
     {
-        get;
-        set; 
+        get
+        {
+            return m_Owner;
+        }
     }
-    public virtual void Init()
+
+    private BoomFunctionEntity m_Owner;
+    public virtual void Init(BoomFunctionEntity owner)
     {
-        Debug.LogError(" executing base boom Init function! ");
+        m_Owner = owner;
     }
 
     public virtual void Discard()
