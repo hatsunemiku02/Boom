@@ -18,4 +18,24 @@ public class BoomCreateEntity : BoomFunction {
     {
         return new BoomCreateEntity();
     }
+
+    private BoomUserAttributeData m_Data;
+
+
+    public override void Init(BoomFunctionEntity owner)
+    {
+        base.Init(owner);
+        m_Data = Owner.AddData(BoomUserAttributeData.RTTI) as BoomUserAttributeData;
+    }
+
+    public override void ExecuteFunction()
+    {
+        // Owner.
+    }
+
+    public override void Discard()
+    {
+        Owner.RemoveData(BoomUserAttributeData.RTTI);
+        m_Data = null;
+    }
 }
