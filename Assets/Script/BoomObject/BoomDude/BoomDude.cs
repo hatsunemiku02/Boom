@@ -23,5 +23,8 @@ public class BoomDude : BoomFunctionEntity {
     {
         base.Init(name);
         AddFunction(BoomMove.RTTI);
+        BoomTriggerReviever triggerReciever = AddFunction(BoomTriggerReviever.RTTI) as BoomTriggerReviever;
+        triggerReciever.AddTriggerFunction(BoomDamageRevieverFunction.RTTI);
+
     }
 }

@@ -24,6 +24,5 @@ public class BoomGame : BoomObject {
     private BoomScene m_GameScene;
     private List<BoomDude> m_DudeArray;
     private List<BoomBob> m_BoomArray;
-    private List<BoomTrigger> m_TriggerArray;
 
 }

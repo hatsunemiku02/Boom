@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BoomBehiever : MonoBehaviour {
+public class BoomBehaviour : MonoBehaviour {
 
     bool m_HaveStarted = false;
 	// Use this for initialization

@@ -26,6 +26,8 @@ public class BoomEntity : BoomObject
     public virtual void Init(string name)
     {
         m_UnityGO = new GameObject(name);
+        m_Bridge = m_UnityGO.AddComponent<BoomUnityObjectBridge>();
+        m_Bridge.EntityForBoom = this;
     }
 
     private GameObject m_UnityGO;
@@ -34,6 +36,15 @@ public class BoomEntity : BoomObject
         get
         {
             return m_UnityGO;
+        }
+
+    }
+    private BoomUnityObjectBridge m_Bridge;
+    public BoomUnityObjectBridge Bridge
+    {
+        get
+        {
+            return m_Bridge;
         }
 
     }
